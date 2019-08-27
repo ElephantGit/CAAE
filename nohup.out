@@ -1,0 +1,33 @@
+Data folder is ./data/UTKFace
+Results folder is ./trained_models/2019_08_27/20_32
+./data/UTKFace
+[20:32] 
+CTRL+C detected, saving model
+
+Traceback (most recent call last):
+  File "/data/qinshuo/projects/face_syn/CAAE/model.py", line 462, in teach
+    di_loss_tot.backward()
+  File "/root/miniconda3/envs/pytorch/lib/python3.7/site-packages/torch/tensor.py", line 118, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/root/miniconda3/envs/pytorch/lib/python3.7/site-packages/torch/autograd/__init__.py", line 93, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 129, in <module>
+    models_saving=args.models_saving
+  File "/data/qinshuo/projects/face_syn/CAAE/model.py", line 508, in teach
+    cp_path = self.save(where_to_save_epoch, to_save_models=True)
+  File "/data/qinshuo/projects/face_syn/CAAE/model.py", line 576, in save
+    torch.save(state_dict, fname)
+  File "/root/miniconda3/envs/pytorch/lib/python3.7/site-packages/torch/serialization.py", line 224, in save
+    return _with_file_like(f, "wb", lambda f: _save(obj, f, pickle_module, pickle_protocol))
+  File "/root/miniconda3/envs/pytorch/lib/python3.7/site-packages/torch/serialization.py", line 149, in _with_file_like
+    return body(f)
+  File "/root/miniconda3/envs/pytorch/lib/python3.7/site-packages/torch/serialization.py", line 224, in <lambda>
+    return _with_file_like(f, "wb", lambda f: _save(obj, f, pickle_module, pickle_protocol))
+  File "/root/miniconda3/envs/pytorch/lib/python3.7/site-packages/torch/serialization.py", line 302, in _save
+    serialized_storages[key]._write_file(f, _should_read_directly(f))
+KeyboardInterrupt

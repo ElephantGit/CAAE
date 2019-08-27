@@ -47,7 +47,7 @@ if __name__ == '__main__':
     parser.add_argument('--mode', choices=['train', 'test'], default='train')
 
     # train params
-    parser.add_argument('--epochs', '-e', default=1, type=int)
+    parser.add_argument('--epochs', '-e', default=200, type=int)
     parser.add_argument(
         '--models-saving',
         '--ms',
@@ -66,7 +66,7 @@ if __name__ == '__main__':
              '\tUse this option if you only wish to collect statistics and validation results.{br}'
              'All options except \'never\' will also save when interrupted by the user.'.format(br=os.linesep)
     )
-    parser.add_argument('--batch-size', '--bs', dest='batch_size', default=64, type=int)
+    parser.add_argument('--batch-size', '--bs', dest='batch_size', default=128, type=int)
     parser.add_argument('--weight-decay', '--wd', dest='weight_decay', default=1e-5, type=float)
     parser.add_argument('--learning-rate', '--lr', dest='learning_rate', default=2e-4, type=float)
     parser.add_argument('--b1', '-b', dest='b1', default=0.5, type=float)
